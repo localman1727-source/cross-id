@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+runs/
+studies/
+*.raw
+*.mzML
+*.mgf
+*.mat
+*.log
+.DS_Store
+templates/*.mzbatch
+!templates/example_*.mzbatch
