@@ -1,0 +1,34 @@
+{
+  "_설명": "연구 한 건을 기술하는 설정 파일. 이 파일만 새로 쓰면 같은 코드가 다른 종·다른 지역에 그대로 돈다. 값을 모르면 비워 두고(빈 문자열) 확인되면 채운다 — 지어내지 않는다.",
+  "study_id": "<YYYYMMDD>_<genus or study short name>_<POS|NEG>",
+  "title": "Human-readable title, used as figure subtitle",
+  "raw_dir": "Folder with raw data on a local disk",
+  "vendor": "Waters | Thermo | Agilent | Shimadzu",
+  "polarity": "POS | NEG",
+  "acquisition": "MSe | DDA | DIA | MS1only",
+  "samples": [
+    {
+      "sample_code": "Sample token found in the raw file name",
+      "collect_id": "Specimen bank / collection ID (blank if none)",
+      "name_kr": "",
+      "scientific_name": "Genus species (Author)",
+      "genus": "Genus",
+      "family": "Family (current classification)",
+      "note": ""
+    }
+  ],
+  "family_aliases": ["Current family name", "Older family name used in literature/databases"],
+  "far_genera": [],
+  "processing": {
+    "rt_min": 0.3,
+    "rt_max": 20,
+    "mz_min": 100,
+    "mz_max": 1200,
+    "min_peak_height": 2000,
+    "msdial_msp": "Path to an MS/MS spectral library (.msp)",
+    "mzmine_template": "templates/example_waters_mse_POS.mzbatch"
+  },
+  "design_caveats": [
+    "Known design weaknesses of this study, quoted verbatim when results are written up"
+  ]
+}
