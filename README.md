@@ -46,13 +46,28 @@ config/            study_template.json — copy and fill in, or use `crossid.py 
 templates/         mzmine batch templates (Waters MSe examples; add your own)
 ```
 
+## Components — all free for academic use
+
+CROSS-ID adds no paid software. Every component below can be used free of charge for academic and
+non-commercial research. Two of them ask for a free account, and both offer paid licences for commercial use.
+
+| Component | Role in CROSS-ID | Cost and licence | Get it |
+|---|---|---|---|
+| mzmine 4 | Peak picking, one peak list for all samples | Free COMMUNITY edition for academic use (free user account). Source code MIT. Commercial use: mzmine PRO | [mzmine.github.io](https://mzmine.github.io/) · [releases](https://github.com/mzmine/mzmine/releases) · [getting started](https://mzmine.github.io/mzmine_documentation/getting_started.html) |
+| MS-DIAL | Spectral library matching | Free download (open source, RIKEN / UC Davis) | [MS-DIAL](https://systemsomicslab.github.io/compms/msdial/main.html) · [source](https://github.com/systemsomicslab/MsdialWorkbench) |
+| MS-FINDER | In-silico fragmentation against structure databases | Free download (open source, same project as MS-DIAL). CROSS-ID calls the console app built from the MsdialWorkbench source | [MS-FINDER](https://systemsomicslab.github.io/compms/msfinder/main.html) · [source](https://github.com/systemsomicslab/MsdialWorkbench) |
+| MS2Query | Machine-learning library search for analogues | Free, Apache-2.0. Install: `pip install ms2query` (separate Python environment recommended). Pretrained models on Zenodo | [GitHub](https://github.com/iomega/ms2query) · models: [positive](https://zenodo.org/records/13348638) · [negative](https://zenodo.org/records/13348683) |
+| SIRIUS 6 (CSI:FingerID, CANOPUS) | Formula, structure fingerprint and compound class prediction | Free for academic / non-commercial use; free account, academic licence granted from the institutional e-mail domain. Commercial use: Bright Giant | [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) · [account and licence](https://boecker-lab.github.io/docs.sirius.github.io/account-and-license) |
+| LOTUS | Structure–organism occurrence records (evidence, not an engine) | Open data (CC0) | [LOTUS](https://lotus.naturalproducts.net/) · frozen snapshot used: [Zenodo 19360665](https://zenodo.org/records/19360665) |
+| Python 3.13 + pandas, numpy, rdkit | Glue, grading, tables | Free, open source | [python.org](https://www.python.org/downloads/) · `pip install pandas numpy rdkit` |
+
+Check each tool's own licence before commercial or patent-related work.
+
 ## Requirements
 
-- Python 3.13 (tested on Windows; pandas, numpy, rdkit — see each script header)
-- External tools installed separately, each under its own licence: mzmine 3/4, MS-DIAL, MS2Query, MS-FINDER, SIRIUS (account login required).
-- Developed and tested on Windows with Waters SYNAPT XS (MSe) data. Default tool paths are Windows paths and can be changed in the scripts or via arguments.
-
-No raw data, study data or engine binaries are included in this repository.
+- Developed and tested on Windows with Waters SYNAPT XS (MSe) data. Default tool locations are Windows paths;
+  change them with `CROSSID_SIRIUS`, `CROSSID_MSFINDER`, `CROSSID_MS2QUERY_PYTHON` and the `*_WORK` variables.
+- No raw data, study data or engine binaries are included in this repository.
 
 ## Citation
 
